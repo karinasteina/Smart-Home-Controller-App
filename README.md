@@ -30,7 +30,7 @@ src/main/java/com/bootcamp/smarthome/
 
 ---
 
-## Task 1 — Custom Exception Hierarchy
+## Task 1 — Custom Exception Hierarchy - DONE
 
 Create the following exception classes in a new package `com.bootcamp.smarthome.exception`:
 
@@ -56,9 +56,9 @@ No changes to `Main` are required for this task.
 
 Add validation and proper exception throwing to the following methods:
 
-- **`SmartLight.setBrightness(int level)`** — throw `InvalidValueException` when `level` is outside `[0, 100]`
-- **`SmartThermostat.setTemperature(double temp)`** — throw `InvalidValueException` when `temp` is outside `[10.0, 35.0]`
-- **`SmartLock.validatePin(String pin)`** — throw `InvalidCommandException` when the PIN is `null` or does not match
+- **`SmartLight.setBrightness(int level)`** — throw `InvalidValueException` when `level` is outside `[0, 100]` - DONE
+- **`SmartThermostat.setTemperature(double temp)`** — throw `InvalidValueException` when `temp` is outside `[10.0, 35.0]` - DONE
+- **`SmartLock.validatePin(String pin)`** — throw `InvalidCommandException` when the PIN is `null` or does not match - DONE
 - **`HomeController.sendCommand(String fullCommand)`** — wrap the method body in `try-catch-finally`:
   - Catch `HomeAutomationException`, then throw a **new** `HomeAutomationException` whose message includes the `deviceId` and the original `fullCommand` string (e.g. `"Command '" + fullCommand + "' failed for device '" + deviceId + "'"`) and pass the caught exception as the `cause` argument — do **not** re-throw the original exception unchanged
   - The `finally` block must always print: `Command processing ended for device [id]`
