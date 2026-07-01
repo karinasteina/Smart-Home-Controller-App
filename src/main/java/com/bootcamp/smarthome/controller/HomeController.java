@@ -1,6 +1,8 @@
 package com.bootcamp.smarthome.controller;
 
 import com.bootcamp.smarthome.device.Device;
+import com.bootcamp.smarthome.exception.DeviceNotFoundException;
+import com.bootcamp.smarthome.exception.DeviceOfflineException;
 import com.bootcamp.smarthome.exception.HomeAutomationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,13 +85,13 @@ public class HomeController {
             Device device = findDevice(deviceId);
 
             if (device == null) {
-                logger.warn("Device with ID '{}' was not found", deviceId);
-                return;
+                throw new DeviceNotFoundException("Device with ID " + deviceId + " was not found");
             }
 
             if (!device.isOnline()) {
                 logger.warn("WARNING: Device '{}' is offline — command skipped.", deviceId);
-                return;
+                throw new DeviceOfflineException("WARNING: Device " + deviceId + " is offline — command skipped.");
+
             }
 
             device.executeCommand(command);
@@ -99,7 +101,11 @@ public class HomeController {
             logger.error("Command '{}' failed for device '{}'", fullCommand, deviceId, e);
             throw new HomeAutomationException("Command '" + fullCommand + "' failed for device '" + deviceId + "'", e);
 
-        }finally {
+        } catch (DeviceNotFoundException e) {
+            logger.error("Device with ID '{}' was not found", deviceId, e);
+            throw new HomeAutomationException("Command '" + fullCommand + "' failed for device '" + deviceId + "'");
+        }
+        finally {
             // The finally block must always print: Command processing ended for device [id]
             System.out.println("Command processing ended for device [" + deviceId + "]");
         }

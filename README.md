@@ -100,5 +100,5 @@ The application does not crash, but produces incorrect output. Use breakpoints a
 3. **`SmartThermostat.setTemperature()`** silently accepts values outside the valid range — triggered by scenario 3 (temperature `99.0` should be rejected)
 4. **`CommandParser.extractCommand()`** drops the value part of commands that have one — triggered by scenario 2 (brightness should be set to `80`, not `50`)
 
-BONUS
+## BONUS - **DONE**
 M3 practical bonus task - utilize unused created exception classes: DeviceOfflineException and DeviceNotFoundException
