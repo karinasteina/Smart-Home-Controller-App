@@ -67,7 +67,7 @@ Update `Main` to handle or declare all checked exceptions where needed.
 
 ---
 
-## Task 3 — SLF4J + Logback Logging
+## Task 3 — SLF4J + Logback Logging - DONE
 
 - Add a `private static final Logger` field to `HomeController` and `SmartLock` — use **SLF4J** (`org.slf4j.Logger` / `org.slf4j.LoggerFactory`): `private static final Logger logger = LoggerFactory.getLogger(ClassName.class);`
 - Log the following events in `HomeController`:

@@ -2,6 +2,8 @@ package com.bootcamp.smarthome.controller;
 
 import com.bootcamp.smarthome.device.Device;
 import com.bootcamp.smarthome.exception.HomeAutomationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Central hub that manages all registered smart devices.
@@ -12,6 +14,7 @@ import com.bootcamp.smarthome.exception.HomeAutomationException;
 public class HomeController {
 
     public static final int MAX_DEVICES = 8;
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     private final Device[] devices = new Device[MAX_DEVICES];
     private int deviceCount = 0;
@@ -74,24 +77,29 @@ public class HomeController {
         try{
 
             String command  = CommandParser.extractCommand(fullCommand);
+            logger.debug("Command '{}' received for device with ID '{}'", fullCommand, deviceId);
 
             Device device = findDevice(deviceId);
 
             if (device == null) {
-                System.out.println("Device not found: " + deviceId);
+                logger.warn("Device with ID '{}' was not found", deviceId);
                 return;
             }
 
             if (!device.isOnline()) {
-                System.out.println("WARNING: Device '" + deviceId + "' is offline — command skipped.");
+                logger.warn("WARNING: Device '{}' is offline — command skipped.", deviceId);
                 return;
             }
 
             device.executeCommand(command);
+            logger.info("Command '{}' executed successfully", command);
+
         }catch (HomeAutomationException e){
+            logger.error("Command '{}' failed for device '{}'", fullCommand, deviceId, e);
             throw new HomeAutomationException("Command '" + fullCommand + "' failed for device '" + deviceId + "'", e);
 
         }finally {
+            // The finally block must always print: Command processing ended for device [id]
             System.out.println("Command processing ended for device [" + deviceId + "]");
         }
 
