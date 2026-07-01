@@ -1,7 +1,6 @@
 package com.bootcamp.smarthome.device;
 
 import com.bootcamp.smarthome.exception.HomeAutomationException;
-import com.bootcamp.smarthome.exception.InvalidValueException;
 
 /**
  * Abstract base class representing a smart home device.
