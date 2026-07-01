@@ -33,3 +33,96 @@ com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
 	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:56)
 	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:94)
 	at com.bootcamp.smarthome.Main.main(Main.java:90)
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' received for device with ID 'LIGHT_01'
+2026-07-01 15:59:04 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' received for device with ID 'LIGHT_02'
+2026-07-01 15:59:04 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' received for device with ID 'THERMO_01'
+2026-07-01 15:59:04 INFO  c.b.s.controller.HomeController - Command 'SET_TEMP' executed successfully
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' received for device with ID 'LIGHT_01'
+2026-07-01 15:59:04 INFO  c.b.s.controller.HomeController - Command 'SET_BRIGHTNESS' executed successfully
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_03 TURN_ON' received for device with ID 'LIGHT_03'
+2026-07-01 15:59:04 WARN  c.b.s.controller.HomeController - WARNING: Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' received for device with ID 'LOCK_02'
+2026-07-01 15:59:04 ERROR c.b.smarthome.device.SmartLock - SECURITY ALERT: PIN is null 'Back Door Lock'
+2026-07-01 15:59:04 ERROR c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' failed for device 'LOCK_02'
+com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
+	at com.bootcamp.smarthome.device.SmartLock.validatePin(SmartLock.java:35)
+	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:56)
+	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:94)
+	at com.bootcamp.smarthome.Main.main(Main.java:90)
+2026-07-01 15:59:04 DEBUG c.b.s.controller.HomeController - Command 'SENSOR_99 TURN_ON' received for device with ID 'SENSOR_99'
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' received for device with ID 'LIGHT_01'
+2026-07-01 16:02:04 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' received for device with ID 'LIGHT_02'
+2026-07-01 16:02:04 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' received for device with ID 'THERMO_01'
+2026-07-01 16:02:04 INFO  c.b.s.controller.HomeController - Command 'SET_TEMP' executed successfully
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' received for device with ID 'LIGHT_01'
+2026-07-01 16:02:04 INFO  c.b.s.controller.HomeController - Command 'SET_BRIGHTNESS' executed successfully
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_03 TURN_ON' received for device with ID 'LIGHT_03'
+2026-07-01 16:02:04 WARN  c.b.s.controller.HomeController - WARNING: Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' received for device with ID 'LOCK_02'
+2026-07-01 16:02:04 ERROR c.b.smarthome.device.SmartLock - SECURITY ALERT: PIN is null 'Back Door Lock'
+2026-07-01 16:02:04 ERROR c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' failed for device 'LOCK_02'
+com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
+	at com.bootcamp.smarthome.device.SmartLock.validatePin(SmartLock.java:35)
+	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:56)
+	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:95)
+	at com.bootcamp.smarthome.Main.main(Main.java:90)
+2026-07-01 16:02:04 DEBUG c.b.s.controller.HomeController - Command 'SENSOR_99 TURN_ON' received for device with ID 'SENSOR_99'
+2026-07-01 16:02:04 WARN  c.b.s.controller.HomeController - Device with ID 'SENSOR_99' was not found
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' received for device with ID 'LIGHT_01'
+2026-07-01 16:11:54 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' received for device with ID 'LIGHT_02'
+2026-07-01 16:11:54 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' received for device with ID 'THERMO_01'
+2026-07-01 16:11:54 INFO  c.b.s.controller.HomeController - Command 'SET_TEMP' executed successfully
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' received for device with ID 'LIGHT_01'
+2026-07-01 16:11:54 INFO  c.b.s.controller.HomeController - Command 'SET_BRIGHTNESS' executed successfully
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_03 TURN_ON' received for device with ID 'LIGHT_03'
+2026-07-01 16:11:54 WARN  c.b.s.controller.HomeController - WARNING: Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' received for device with ID 'LOCK_02'
+2026-07-01 16:11:54 ERROR c.b.smarthome.device.SmartLock - SECURITY ALERT: PIN is null 'Back Door Lock'
+2026-07-01 16:11:54 ERROR c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' failed for device 'LOCK_02'
+com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
+	at com.bootcamp.smarthome.device.SmartLock.validatePin(SmartLock.java:35)
+	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:56)
+	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:95)
+	at com.bootcamp.smarthome.Main.main(Main.java:90)
+2026-07-01 16:11:54 DEBUG c.b.s.controller.HomeController - Command 'SENSOR_99 TURN_ON' received for device with ID 'SENSOR_99'
+2026-07-01 16:11:54 WARN  c.b.s.controller.HomeController - Device with ID 'SENSOR_99' was not found
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' received for device with ID 'LIGHT_01'
+2026-07-01 16:17:26 INFO  c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' executed successfully
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' received for device with ID 'LIGHT_02'
+2026-07-01 16:17:26 INFO  c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' executed successfully
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' received for device with ID 'THERMO_01'
+2026-07-01 16:17:26 INFO  c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' executed successfully
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' received for device with ID 'LIGHT_01'
+2026-07-01 16:17:26 INFO  c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' executed successfully
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_03 TURN_ON' received for device with ID 'LIGHT_03'
+2026-07-01 16:17:26 WARN  c.b.s.controller.HomeController - WARNING: Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' received for device with ID 'LOCK_02'
+2026-07-01 16:17:26 INFO  c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' executed successfully
+2026-07-01 16:17:26 DEBUG c.b.s.controller.HomeController - Command 'SENSOR_99 TURN_ON' received for device with ID 'SENSOR_99'
+2026-07-01 16:17:26 WARN  c.b.s.controller.HomeController - Device with ID 'SENSOR_99' was not found
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 TURN_ON' received for device with ID 'LIGHT_01'
+2026-07-01 16:21:52 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_02 TURN_ON' received for device with ID 'LIGHT_02'
+2026-07-01 16:21:52 INFO  c.b.s.controller.HomeController - Command 'TURN_ON' executed successfully
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'THERMO_01 SET_TEMP 22.5' received for device with ID 'THERMO_01'
+2026-07-01 16:21:52 INFO  c.b.s.controller.HomeController - Command 'SET_TEMP 22.5' executed successfully
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_01 SET_BRIGHTNESS 80' received for device with ID 'LIGHT_01'
+2026-07-01 16:21:52 INFO  c.b.s.controller.HomeController - Command 'SET_BRIGHTNESS 80' executed successfully
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'LIGHT_03 TURN_ON' received for device with ID 'LIGHT_03'
+2026-07-01 16:21:52 WARN  c.b.s.controller.HomeController - WARNING: Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' received for device with ID 'LOCK_02'
+2026-07-01 16:21:52 ERROR c.b.smarthome.device.SmartLock - SECURITY ALERT: PIN is null 'Back Door Lock'
+2026-07-01 16:21:52 ERROR c.b.s.controller.HomeController - Command 'LOCK_02 UNLOCK' failed for device 'LOCK_02'
+com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
+	at com.bootcamp.smarthome.device.SmartLock.validatePin(SmartLock.java:35)
+	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:56)
+	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:95)
+	at com.bootcamp.smarthome.Main.main(Main.java:90)
+2026-07-01 16:21:52 DEBUG c.b.s.controller.HomeController - Command 'SENSOR_99 TURN_ON' received for device with ID 'SENSOR_99'
+2026-07-01 16:21:52 WARN  c.b.s.controller.HomeController - Device with ID 'SENSOR_99' was not found

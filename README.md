@@ -67,7 +67,7 @@ Update `Main` to handle or declare all checked exceptions where needed.
 
 ---
 
-## Task 3 — SLF4J + Logback Logging - DONE
+## Task 3 — SLF4J + Logback Logging - **DONE**
 
 - Add a `private static final Logger` field to `HomeController` and `SmartLock` — use **SLF4J** (`org.slf4j.Logger` / `org.slf4j.LoggerFactory`): `private static final Logger logger = LoggerFactory.getLogger(ClassName.class);`
 - Log the following events in `HomeController`:
@@ -82,7 +82,7 @@ Update `Main` to handle or declare all checked exceptions where needed.
 
 ---
 
-## Task 4 — Debug & Fix Planted Bugs
+## Task 4 — Debug & Fix Planted Bugs - **DONE**
 
 The codebase contains four deliberate bugs. Use the debugger and stack traces to find and fix each one.
 

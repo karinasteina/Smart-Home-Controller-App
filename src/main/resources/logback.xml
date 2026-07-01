@@ -18,7 +18,7 @@
     When root level is changed from DEBUG to WARN,
         it no longer logs the INFO and DEBUG type logs.
     -->
-    <root level="WARN">
+    <root level="DEBUG">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
