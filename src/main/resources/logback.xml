@@ -7,20 +7,20 @@
         </encoder>
     </appender>
 
-    <!--
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>smart-home.log</file>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    -->
 
+    <!--
+    When root level is changed from DEBUG to WARN,
+        it no longer logs the INFO and DEBUG type logs.
+    -->
     <root level="DEBUG">
         <appender-ref ref="CONSOLE" />
-        <!--
-            <appender-ref ref="FILE" />
-        -->
+        <appender-ref ref="FILE" />
     </root>
 
 </configuration>

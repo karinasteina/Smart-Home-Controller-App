@@ -1,5 +1,7 @@
 package com.bootcamp.smarthome.controller;
 
+import java.util.Arrays;
+
 /**
  * Parses full command strings into their component parts for use by
  * {@link HomeController}.
@@ -36,6 +38,8 @@ public class CommandParser {
      */
     public static String extractCommand(String fullCommand) {
         String[] parts = fullCommand.split(" ");
-        return parts[1];
+        parts = Arrays.copyOfRange(parts, 1, parts.length);
+
+        return String.join(" ", parts);
     }
 }
