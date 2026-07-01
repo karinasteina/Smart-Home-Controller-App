@@ -30,7 +30,7 @@ src/main/java/com/bootcamp/smarthome/
 
 ---
 
-## Task 1 — Custom Exception Hierarchy - DONE
+## Task 1 — Custom Exception Hierarchy - **DONE**
 
 Create the following exception classes in a new package `com.bootcamp.smarthome.exception`:
 
@@ -45,21 +45,21 @@ Create the following exception classes in a new package `com.bootcamp.smarthome.
 `InvalidValueException` must provide a constructor with the following signature:
 
 ```java
-public InvalidValueException(String field, Object value, String constraint)
+public InvalidValueException(String field, Object value, String constraint);
 ```
 
 No changes to `Main` are required for this task.
 
 ---
 
-## Task 2 — Exception Handling
+## Task 2 — Exception Handling - **DONE**
 
-Add validation and proper exception throwing to the following methods:
+Add validation and proper exception throwing to the following methods: 
 
-- **`SmartLight.setBrightness(int level)`** — throw `InvalidValueException` when `level` is outside `[0, 100]` - DONE
-- **`SmartThermostat.setTemperature(double temp)`** — throw `InvalidValueException` when `temp` is outside `[10.0, 35.0]` - DONE
-- **`SmartLock.validatePin(String pin)`** — throw `InvalidCommandException` when the PIN is `null` or does not match - DONE
-- **`HomeController.sendCommand(String fullCommand)`** — wrap the method body in `try-catch-finally`:
+- **`SmartLight.setBrightness(int level)`** — throw `InvalidValueException` when `level` is outside `[0, 100]`
+- **`SmartThermostat.setTemperature(double temp)`** — throw `InvalidValueException` when `temp` is outside `[10.0, 35.0]` 
+- **`SmartLock.validatePin(String pin)`** — throw `InvalidCommandException` when the PIN is `null` or does not match 
+- **`HomeController.sendCommand(String fullCommand)`** — wrap the method body in `try-catch-finally`: 
   - Catch `HomeAutomationException`, then throw a **new** `HomeAutomationException` whose message includes the `deviceId` and the original `fullCommand` string (e.g. `"Command '" + fullCommand + "' failed for device '" + deviceId + "'"`) and pass the caught exception as the `cause` argument — do **not** re-throw the original exception unchanged
   - The `finally` block must always print: `Command processing ended for device [id]`
 
@@ -99,3 +99,6 @@ The application does not crash, but produces incorrect output. Use breakpoints a
 
 3. **`SmartThermostat.setTemperature()`** silently accepts values outside the valid range — triggered by scenario 3 (temperature `99.0` should be rejected)
 4. **`CommandParser.extractCommand()`** drops the value part of commands that have one — triggered by scenario 2 (brightness should be set to `80`, not `50`)
+
+BONUS
+M3 practical bonus task - utilize unused created exception classes: DeviceOfflineException and DeviceNotFoundException
